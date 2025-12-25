@@ -8,11 +8,11 @@ body.addEventListener('click',(e)=>{
     circle.classList.add('circle');
     circle.textContent = "Hii";
 
-    const color = ['Red','blue','orange','grey','pink','aqua','brown','purple'];
-    circle.style.backgroundColor = color[Math.floor(Math.random()*8)];
+    const color = ['Red','blue','orange','grey','pink','aqua','brown','purple','yellow','white'];
+    circle.style.backgroundColor = color[Math.floor(Math.random()*10)];
 
-    circle.style.top = `${e.clientY}px`;
-    circle.style.left = `${e.clientX}px`;
+    circle.style.top = `${e.clientY-20}px`;
+    circle.style.left = `${e.clientX-20}px`;
 
     body.append(circle);
 
@@ -21,4 +21,5 @@ body.addEventListener('click',(e)=>{
         circle.remove(); 
     }, 5000);
     
+
 })
